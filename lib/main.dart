@@ -53,7 +53,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  AnimationController? _animationController;
+  late AnimationController _animationController;
 
   //initState() is called once and only once. It must call super.initState().
   @override
@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   void dispose() {
     print('dispose Example');
-    _animationController?.dispose();
+    _animationController.dispose();
     // TODO: implement dispose
     super.dispose();
   }
